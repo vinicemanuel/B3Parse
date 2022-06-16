@@ -26,15 +26,9 @@ class TestsInteractor: XCTestCase {
         return interactor
     }()
     
-    lazy var fileURL: URL = {
-        let bundle = Bundle(for: type(of: self))
-        let url = bundle.url(forResource: "movimentacao-2022-06-14-14-22-17", withExtension: "xlsx")
-        return url!
-    }()
-    
-    func test_loadFilesFromURL() {
-        self.interactor.loadFilesFrom(from: RequestFiles(folderURL: self.fileURL))
+    func test_load_files_from_valid_URL() {
+        self.interactor.loadFilesFrom(from: RequestFiles(folderURL: FilesUtil.shared.testFolderURL))
         let expectedResult: [[String: [String]]] = []
-        XCTAssertNotEqual(self.spyPresenter.response?.filesData, expectedResult)
+        XCTAssertEqual(self.spyPresenter.response?.filesData, expectedResult)
     }
 }

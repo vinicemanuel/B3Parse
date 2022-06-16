@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09611CD3285B695700ED2B61 /* movimentacao-2022-06-14-14-22-17.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 09611CD2285B695700ED2B61 /* movimentacao-2022-06-14-14-22-17.xlsx */; };
+		0902E775285B9ECB00C1C8FF /* csvs in Resources */ = {isa = PBXBuildFile; fileRef = 0902E774285B9ECB00C1C8FF /* csvs */; };
+		0902E778285BA2FD00C1C8FF /* FolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902E777285BA2FD00C1C8FF /* FolderWorker.swift */; };
+		0902E77A285BA41300C1C8FF /* FilesUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902E779285BA41300C1C8FF /* FilesUtil.swift */; };
+		0902E77C285BA4F000C1C8FF /* TestFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902E77B285BA4F000C1C8FF /* TestFolderWorker.swift */; };
+		0902E77E285BBB4000C1C8FF /* FileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902E77D285BBB4000C1C8FF /* FileWorker.swift */; };
+		0902E780285BBC4D00C1C8FF /* TestFileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902E77F285BBC4C00C1C8FF /* TestFileWorker.swift */; };
 		09DCDAEA2858FF150044E38F /* B3ParseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DCDAE92858FF150044E38F /* B3ParseApp.swift */; };
 		09DCDAEC2858FF150044E38F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DCDAEB2858FF150044E38F /* ContentView.swift */; };
 		09DCDAEE2858FF160044E38F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09DCDAED2858FF160044E38F /* Assets.xcassets */; };
@@ -31,7 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09611CD2285B695700ED2B61 /* movimentacao-2022-06-14-14-22-17.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "movimentacao-2022-06-14-14-22-17.xlsx"; sourceTree = "<group>"; };
+		0902E774285B9ECB00C1C8FF /* csvs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = csvs; sourceTree = "<group>"; };
+		0902E777285BA2FD00C1C8FF /* FolderWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderWorker.swift; sourceTree = "<group>"; };
+		0902E779285BA41300C1C8FF /* FilesUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesUtil.swift; sourceTree = "<group>"; };
+		0902E77B285BA4F000C1C8FF /* TestFolderWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFolderWorker.swift; sourceTree = "<group>"; };
+		0902E77D285BBB4000C1C8FF /* FileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWorker.swift; sourceTree = "<group>"; };
+		0902E77F285BBC4C00C1C8FF /* TestFileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFileWorker.swift; sourceTree = "<group>"; };
 		09DCDAE62858FF150044E38F /* B3Parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = B3Parse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DCDAE92858FF150044E38F /* B3ParseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B3ParseApp.swift; sourceTree = "<group>"; };
 		09DCDAEB2858FF150044E38F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,10 +75,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0902E776285BA2DB00C1C8FF /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				0902E777285BA2FD00C1C8FF /* FolderWorker.swift */,
+				0902E77D285BBB4000C1C8FF /* FileWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 		09611CD4285B696100ED2B61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				09611CD2285B695700ED2B61 /* movimentacao-2022-06-14-14-22-17.xlsx */,
+				0902E774285B9ECB00C1C8FF /* csvs */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -115,9 +134,12 @@
 		09DCDAFC2858FF640044E38F /* B3ParseTests */ = {
 			isa = PBXGroup;
 			children = (
+				0902E779285BA41300C1C8FF /* FilesUtil.swift */,
 				09611CD4285B696100ED2B61 /* Resources */,
 				09DCDB0428591CE30044E38F /* Info.plist */,
 				09DCDAFD2858FF640044E38F /* TestsInteractor.swift */,
+				0902E77B285BA4F000C1C8FF /* TestFolderWorker.swift */,
+				0902E77F285BBC4C00C1C8FF /* TestFileWorker.swift */,
 			);
 			path = B3ParseTests;
 			sourceTree = "<group>";
@@ -125,6 +147,7 @@
 		09DCDB09285A04AC0044E38F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0902E776285BA2DB00C1C8FF /* Workers */,
 				09DCDB05285921540044E38F /* FolderPicker.swift */,
 				09DCDAEB2858FF150044E38F /* ContentView.swift */,
 				09DCDB0B285A05090044E38F /* Interactor.swift */,
@@ -223,7 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09611CD3285B695700ED2B61 /* movimentacao-2022-06-14-14-22-17.xlsx in Resources */,
+				0902E775285B9ECB00C1C8FF /* csvs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,9 +260,11 @@
 				09DCDB06285921540044E38F /* FolderPicker.swift in Sources */,
 				09DCDB10285A0B960044E38F /* Presenter.swift in Sources */,
 				09DCDAEC2858FF150044E38F /* ContentView.swift in Sources */,
+				0902E778285BA2FD00C1C8FF /* FolderWorker.swift in Sources */,
 				09DCDB0E285A060E0044E38F /* Stock.swift in Sources */,
 				09DCDB0C285A05090044E38F /* Interactor.swift in Sources */,
 				09DCDAEA2858FF150044E38F /* B3ParseApp.swift in Sources */,
+				0902E77E285BBB4000C1C8FF /* FileWorker.swift in Sources */,
 				09DCDB08285A03D80044E38F /* B3ParseFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0902E77C285BA4F000C1C8FF /* TestFolderWorker.swift in Sources */,
+				0902E780285BBC4D00C1C8FF /* TestFileWorker.swift in Sources */,
 				09DCDAFE2858FF640044E38F /* TestsInteractor.swift in Sources */,
+				0902E77A285BA41300C1C8FF /* FilesUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

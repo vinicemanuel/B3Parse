@@ -1,0 +1,15 @@
+Entrada/Saída;Data;Movimentação;Produto;Instituição;Quantidade;Preço unitário;Valor da Operação
+Credito;27/12/2019;Transferência - Liquidação;LGCP11 - LOGCP INTER FDO INV IMOB                          ;INTER DTVM LTDA;2; RR$	102,97 ; RR$	205,94 
+Credito;26/12/2019;Transferência - Liquidação;BCFF11 - FDO INV IMOB - FII BTG PACTUAL FUNDO DE FUNDOS    ;INTER DTVM LTDA;1; RR$	100,29 ; RR$	100,29 
+Credito;17/12/2019;Transferência - Liquidação;BCFF11 - FDO INV IMOB - FII BTG PACTUAL FUNDO DE FUNDOS    ;INTER DTVM LTDA;1; RR$	99,99 ; RR$	99,99 
+Credito;16/12/2019;Transferência - Liquidação;BCFF11 - FDO INV IMOB - FII BTG PACTUAL FUNDO DE FUNDOS    ;INTER DTVM LTDA;1; RR$	99,96 ; RR$	99,96 
+Credito;13/12/2019;Rendimento;FLMA11 - FDO INV IMOB CONTINENTAL SQUARE FARIA LIMA        ;INTER DTVM LTDA;10; RR$	0,02 ; RR$	0,15 
+Credito;12/12/2019;Rendimento;BCFF11 - FDO INV IMOB - FII BTG PACTUAL FUNDO DE FUNDOS    ;INTER DTVM LTDA;1; RR$	0,53 ; RR$	0,53 
+Credito;09/12/2019;Transferência - Liquidação;BCFF11 - FDO INV IMOB - FII BTG PACTUAL FUNDO DE FUNDOS    ;INTER DTVM LTDA;1; RR$	104,60 ; RR$	104,60 
+Credito;14/11/2019;Rendimento;FLMA11 - FDO INV IMOB CONTINENTAL SQUARE FARIA LIMA        ;INTER DTVM LTDA;2; RR$	0,02 ; RR$	0,03 
+Debito;13/11/2019;Transferência - Liquidação;VIVR3 - VIVER INCORPORADORA E CONSTRUTORA S.A.            ;INTER DTVM LTDA;15; RR$	1,50 ; RR$	22,50 
+Credito;11/11/2019;Transferência - Liquidação;FLMA11 - FDO INV IMOB CONTINENTAL SQUARE FARIA LIMA        ;INTER DTVM LTDA;8; RR$	5,74 ; RR$	45,92 
+Credito;11/11/2019;Transferência - Liquidação;VIVR3 - VIVER INCORPORADORA E CONSTRUTORA S.A.            ;INTER DTVM LTDA;4; RR$	1,53 ; RR$	6,12 
+Credito;08/11/2019;Transferência - Liquidação;FLMA11 - FDO INV IMOB CONTINENTAL SQUARE FARIA LIMA        ;INTER DTVM LTDA;2; RR$	6,04 ; RR$	12,08 
+Credito;07/11/2019;Transferência - Liquidação;ITUB3 - ITAU UNIBANCO HOLDING S.A.                        ;INTER DTVM LTDA;1; RR$	31,79 ; RR$	31,79 
+Credito;07/11/2019;Transferência - Liquidação;VIVR3 - VIVER INCORPORADORA E CONSTRUTORA S.A.            ;INTER DTVM LTDA;11; RR$	1,55 ; RR$	17,05 
