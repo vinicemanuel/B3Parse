@@ -8,7 +8,7 @@
 import Foundation
 
 class FolderWorker {
-    let folderPath: URL
+    private let folderPath: URL
     
     init(folderPath: URL) {
         self.folderPath = folderPath

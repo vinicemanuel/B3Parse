@@ -6,15 +6,32 @@
 //
 
 import Foundation
+import SwiftCSV
 
 class FileWorker {
-    let fileURL: URL
+    private let fileURL: URL
+    private var csv: CSV?
+    
     
     init(fileURL: URL) {
         self.fileURL = fileURL
     }
     
-    func getFileValues() -> [String: [String]] {
-        return [:]
+    func getFileValues() throws -> [String: [String]] {
+        if self.csv == nil {
+            self.csv = try CSV(url: self.fileURL)
+        }
+        
+        guard let csv = self.csv else { return [:] }
+        
+        var columns: [String: [String]] = [:]
+//        print(csv.enumeratedColumns)
+        
+        for column in csv.enumeratedColumns {
+            print(column)
+            columns[column.header] = column.rows
+        }
+        
+        return columns
     }
 }

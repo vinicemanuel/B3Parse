@@ -9,13 +9,26 @@ import XCTest
 @testable import B3Parse
 
 class TestFileWorker: XCTestCase {
+    private let expectedResult: [String: [String]] = ["Movimentação": ["Transferência - Liquidação",
+                                                               "Transferência - Liquidação",
+                                                               "Transferência - Liquidação",
+                                                               "Transferência - Liquidação",
+                                                               "Rendimento",
+                                                               "Rendimento",
+                                                               "Transferência - Liquidação",
+                                                               "Rendimento",
+                                                               "Transferência - Liquidação",
+                                                               "Transferência - Liquidação",
+                                                               "Transferência - Liquidação",
+                                                               "Transferência - Liquidação",
+                                                               "Transferência - Liquidação",
+                                                               "Transferência - Liquidação"]]
     
-    func test_open_existent_file() {
+    func test_open_existent_file() throws {
         let worker = FileWorker(fileURL: FilesUtil.shared.testFolderFile1)
         
-        let fileContent = worker.getFileValues()
-        let expectedResult: [String: [String]] = [:]
+        let fileContent = try worker.getFileValues()
         
-        XCTAssertNotEqual(fileContent, expectedResult)
+        XCTAssertEqual(fileContent["Movimentação"], expectedResult["Movimentação"])
     }
 }

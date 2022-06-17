@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftcsv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftcsv/SwiftCSV.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "7461683fd04598ba07cbcb6a9efc2a89601c5d15"
+      }
+    }
+  ],
+  "version" : 2
+}

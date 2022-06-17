@@ -13,6 +13,7 @@
 		0902E77C285BA4F000C1C8FF /* TestFolderWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902E77B285BA4F000C1C8FF /* TestFolderWorker.swift */; };
 		0902E77E285BBB4000C1C8FF /* FileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902E77D285BBB4000C1C8FF /* FileWorker.swift */; };
 		0902E780285BBC4D00C1C8FF /* TestFileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902E77F285BBC4C00C1C8FF /* TestFileWorker.swift */; };
+		09AFE6A9285CA6E2009AD6E4 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 09AFE6A8285CA6E2009AD6E4 /* SwiftCSV */; };
 		09DCDAEA2858FF150044E38F /* B3ParseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DCDAE92858FF150044E38F /* B3ParseApp.swift */; };
 		09DCDAEC2858FF150044E38F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DCDAEB2858FF150044E38F /* ContentView.swift */; };
 		09DCDAEE2858FF160044E38F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09DCDAED2858FF160044E38F /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09AFE6A9285CA6E2009AD6E4 /* SwiftCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,13 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
+		0902E784285CA41E00C1C8FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		09611CD4285B696100ED2B61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +107,7 @@
 				09DCDAE82858FF150044E38F /* B3Parse */,
 				09DCDAFC2858FF640044E38F /* B3ParseTests */,
 				09DCDAE72858FF150044E38F /* Products */,
+				0902E784285CA41E00C1C8FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +182,9 @@
 			dependencies = (
 			);
 			name = B3Parse;
+			packageProductDependencies = (
+				09AFE6A8285CA6E2009AD6E4 /* SwiftCSV */,
+			);
 			productName = B3Parse;
 			productReference = 09DCDAE62858FF150044E38F /* B3Parse.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 09DCDADD2858FF150044E38F;
+			packageReferences = (
+				09AFE6A7285CA6E2009AD6E4 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+			);
 			productRefGroup = 09DCDAE72858FF150044E38F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -534,6 +550,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		09AFE6A7285CA6E2009AD6E4 /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftcsv/SwiftCSV.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09AFE6A8285CA6E2009AD6E4 /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09AFE6A7285CA6E2009AD6E4 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09DCDADE2858FF150044E38F /* Project object */;
 }
