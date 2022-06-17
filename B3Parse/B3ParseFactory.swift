@@ -33,16 +33,3 @@ protocol ProcessResponse {
 protocol DisplayStocks {
     func loadStocks(viewModel: StocksViewModel)
 }
-
-//MARK: - Models
-struct RequestFiles {
-    let folderURL: URL
-}
-
-struct ResponseFiles {
-    let filesData: [[String: [String]]]
-}
-
-struct StocksViewModel {
-    let stocks: [Stock]
-}

@@ -18,7 +18,7 @@ class FolderWorker {
         let directoryContents = try FileManager.default.contentsOfDirectory(atPath: self.folderPath.path)
         let urls = directoryContents.compactMap({ (fileName: String) -> URL in
             let path = "file://\(self.folderPath.path)/\(fileName)"
-            var url = URL(string: path)
+            let url = URL(string: path)
             
             return url!
         })

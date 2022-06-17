@@ -15,8 +15,8 @@ class TestFolderWorker: XCTestCase {
         
         let filesURL = try worker.getCSVFilesPaths()
         
-        XCTAssertEqual(filesURL[0].path, FilesUtil.shared.testFolderFile1.path)
-        XCTAssertEqual(filesURL[1].path, FilesUtil.shared.testFolderFile2.path)
+        XCTAssertEqual(filesURL[0].path, FilesUtil.shared.testPathFile1.path)
+        XCTAssertEqual(filesURL[1].path, FilesUtil.shared.testPathFile2.path)
         
         XCTAssertTrue(filesURL[0].isFileURL)
         XCTAssertTrue(filesURL[1].isFileURL)
