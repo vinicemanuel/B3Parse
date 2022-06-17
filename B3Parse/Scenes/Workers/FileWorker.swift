@@ -25,7 +25,6 @@ class FileWorker {
         guard let csv = self.csv else { return [:] }
         
         var columns: [String: [String]] = [:]
-//        print(csv.enumeratedColumns)
         
         for column in csv.enumeratedColumns {
             print(column)

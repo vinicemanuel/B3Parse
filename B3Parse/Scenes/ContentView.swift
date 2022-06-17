@@ -22,7 +22,7 @@ struct ContentView: View, DisplayStocks {
         .sheet(isPresented: $showingFolderPicker) {
             FolderPicker { folderURL in
                 let presenter = B3ParseFactory.createInteractor(view: self)
-                presenter.loadFilesFrom(from: RequestFiles(folderURL: folderURL))
+                try? presenter.loadFilesFrom(from: RequestFiles(folderURL: folderURL))
             }
         }
     }

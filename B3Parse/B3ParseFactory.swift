@@ -22,7 +22,7 @@ class B3ParseFactory {
 //MARK: - protocols
 protocol ProcessRequest {
     var presenter: ProcessResponse? { get set }
-    func loadFilesFrom(from request: RequestFiles)
+    func loadFilesFrom(from request: RequestFiles) throws
 }
 
 protocol ProcessResponse {

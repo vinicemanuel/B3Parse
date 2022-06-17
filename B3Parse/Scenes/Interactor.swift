@@ -12,13 +12,15 @@ class Interactor: ProcessRequest {
     //MARK: - InteractorDelegate
     var presenter: ProcessResponse?
     
-    func loadFilesFrom(from request: RequestFiles) {
+    func loadFilesFrom(from request: RequestFiles) throws {
         let folderURL = request.folderURL
         print(folderURL)
         
         let folderWorker = FolderWorker(folderPath: folderURL)
-        let filesURL = try? folderWorker.getCSVFilesPaths()
+        let filesURL = try folderWorker.getCSVFilesPaths()
         
-        self.presenter?.createStocks(from: ResponseFiles(filesData: []))
+        let resultFilesArray: [[String: [String]]] = Array(repeating: [:], count: filesURL.count)
+        
+        self.presenter?.createStocks(from: ResponseFiles(filesData: resultFilesArray))
     }
 }

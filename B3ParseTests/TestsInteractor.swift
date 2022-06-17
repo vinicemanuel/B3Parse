@@ -10,7 +10,7 @@ import XCTest
 
 class SpyPresenter: ProcessResponse {
     var view: DisplayStocks?
-    var response: ResponseFiles?
+    var response: ResponseFiles!
     
     func createStocks(from response: ResponseFiles) {
         self.response = response
@@ -26,9 +26,10 @@ class TestsInteractor: XCTestCase {
         return interactor
     }()
     
-    func test_load_files_from_valid_URL() {
-        self.interactor.loadFilesFrom(from: RequestFiles(folderURL: FilesUtil.shared.testFolderURL))
-        let expectedResult: [[String: [String]]] = []
-        XCTAssertEqual(self.spyPresenter.response?.filesData, expectedResult)
+    func test_load_files_from_valid_URL() throws {
+        try self.interactor.loadFilesFrom(from: RequestFiles(folderURL: FilesUtil.shared.testFolderURL))
+        let expectedResult: [[String: [String]]] = [[:], [:]]
+        
+        XCTAssertEqual(self.spyPresenter.response.filesData, expectedResult)
     }
 }
