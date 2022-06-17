@@ -17,13 +17,12 @@ class FolderWorker {
     func getCSVFilesPaths() throws -> [URL] {
         let directoryContents = try FileManager.default.contentsOfDirectory(atPath: self.folderPath.path)
         let urls = directoryContents.compactMap({ (fileName: String) -> URL in
-            
-            var url = URL(string: "\(self.folderPath.path)")
-            url?.appendPathComponent(fileName)
+            let path = "file://\(self.folderPath.path)/\(fileName)"
+            var url = URL(string: path)
             
             return url!
         })
-
+    
         return urls
     }
 }

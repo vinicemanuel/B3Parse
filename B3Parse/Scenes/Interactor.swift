@@ -19,7 +19,13 @@ class Interactor: ProcessRequest {
         let folderWorker = FolderWorker(folderPath: folderURL)
         let filesURL = try folderWorker.getCSVFilesPaths()
         
-        let resultFilesArray: [[String: [String]]] = Array(repeating: [:], count: filesURL.count)
+        var resultFilesArray: [[String: [String]]] = []
+        
+        for fileURL in filesURL {
+            let fileWorker = FileWorker(fileURL: fileURL)
+            let fileColumns = try fileWorker.getFileValues()
+            resultFilesArray.append(fileColumns)
+        }
         
         self.presenter?.createStocks(from: ResponseFiles(filesData: resultFilesArray))
     }

@@ -17,5 +17,8 @@ class TestFolderWorker: XCTestCase {
         
         XCTAssertEqual(filesURL[0].path, FilesUtil.shared.testFolderFile1.path)
         XCTAssertEqual(filesURL[1].path, FilesUtil.shared.testFolderFile2.path)
+        
+        XCTAssertTrue(filesURL[0].isFileURL)
+        XCTAssertTrue(filesURL[1].isFileURL)
     }
 }
